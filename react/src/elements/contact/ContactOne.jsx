@@ -46,7 +46,7 @@ class ContactOne extends Component {
               <div className="section-title text-left mb--50">
                 <h2 className="title">Contact us.</h2>
                 <p className="description">
-                  We provide free estimate. Connect with me via phone:{" "}
+                  We provide free estimates. Connect with us via phone:{" "}
                   <a href="tel:+3862164836">386-216-4836</a> or email:
                   <a href="mailto:GoldHoodService@hotmail.com"> GoldHoodService@hotmail.com</a>{" "}
                 </p>

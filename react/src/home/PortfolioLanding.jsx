@@ -22,9 +22,9 @@ const SlideList = [
 const PortfolioLanding = () => {
   let title = "About us",
     description =
-      `As a family owned and operated small business we created our company with a lot of passion, hard work, dedication, and attention to detail.
-      We treat every project whether it be commercial or residential with the care and attention we would in our own home. We provide top-notch services with fair and competitive prices.
-    The best commercial hood cleaning services that will exceed our client's expectations. We strive to create a clean and healthy kitchen for our client's staff and visitors. We know life can get busy, the last thing we want you to worry about is your exhaust system.`;
+      `As a family-owned and operated business, we established our company with immense passion, relentless hard work, unyielding dedication, and meticulous attention to detail. 
+      We approach every project, whether commercial or residential, with the same level of care and attention we would give our own home, ensuring top-quality service at fair and competitive prices. Our commitment is to offer the finest commercial hood cleaning services, aiming to surpass our clients' expectations consistently. 
+      We are dedicated to maintaining a clean and healthy kitchen environment for our clients' staff and visitors alike. We understand how busy life can be, and we aim to relieve you of any concerns related to your exhaust system.`;
     const descriptionWithBreaks = description.split('\n').map((text, index) => (
       <React.Fragment key={index}>
         {text}
@@ -127,7 +127,7 @@ const PortfolioLanding = () => {
               <div className="col-lg-12">
                 <div className="section-title text-center service-style--3 mb--30 mb_sm--0">
                   <h2 className="title">Services</h2>
-                  <p>We are providing a whide scale of services</p>
+                  <p>We provide a wide range of services.</p>
                 </div>
               </div>
             </div>
