@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6abc4ff1.chunk.css",
+    "main.js": "/static/js/main.78d61eac.chunk.js",
+    "main.js.map": "/static/js/main.78d61eac.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.ac5a3147.js",
+    "runtime~main.js.map": "/static/js/runtime~main.ac5a3147.js.map",
+    "static/css/2.52be7b26.chunk.css": "/static/css/2.52be7b26.chunk.css",
+    "static/js/2.35ae7ce2.chunk.js": "/static/js/2.35ae7ce2.chunk.js",
+    "static/js/2.35ae7ce2.chunk.js.map": "/static/js/2.35ae7ce2.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.57167572242db3af88e483d19e42803b.js": "/precache-manifest.57167572242db3af88e483d19e42803b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.52be7b26.chunk.css.map": "/static/css/2.52be7b26.chunk.css.map",
+    "static/css/main.6abc4ff1.chunk.css.map": "/static/css/main.6abc4ff1.chunk.css.map",
+    "static/media/concrete.55e38084.svg": "/static/media/concrete.55e38084.svg",
+    "static/media/fan.925be47a.svg": "/static/media/fan.925be47a.svg",
+    "static/media/hood.41081e30.svg": "/static/media/hood.41081e30.svg",
+    "static/media/house.0570fb97.svg": "/static/media/house.0570fb97.svg",
+    "static/media/index.scss": "/static/media/slick.f97e3bbf.svg"
+  }
+}

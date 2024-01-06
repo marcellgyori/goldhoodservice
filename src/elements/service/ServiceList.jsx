@@ -3,16 +3,14 @@ import { ReactComponent as ConcreteCleaningIcon } from "../../../public/assets/i
 import { ReactComponent as HouseIcon } from "../../../public/assets/images/icons/house.svg";
 import { ReactComponent as HoodIcon } from "../../../public/assets/images/icons/hood.svg";
 import { ReactComponent as FanIcon } from "../../../public/assets/images/icons/fan.svg";
-import Modal from './Modal'; // Import the modal component
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/dist/styles.css";
+import Video from "yet-another-react-lightbox/dist/plugins/video";
+import Thumbnails from "yet-another-react-lightbox/dist/plugins/thumbnails";
+import "yet-another-react-lightbox/dist/plugins/thumbnails/thumbnails.css";
+
 
 const ServiceList = [
-  {
-    icon: <HouseIcon />,
-    title: "House Washing",
-    description:
-      "Professional house washing services to remove dirt and rejuvenate the exterior of your home.",
-    images: ["/assets/images/services/house_cleaning_1.jpg", "assets/images/services/house_cleaning_2.jpg", "assets/images/services/house_cleaning_3.jpg"],
-  },
   {
     icon: <HoodIcon />,
     title: "Hood Cleaning",
@@ -20,6 +18,13 @@ const ServiceList = [
       "Expert hood cleaning services ensuring kitchen efficiency and safety by maintaining a grease-free environment.",
     images: ["/assets/images/services/hood_cleaning.jpg"],
 
+  },
+  {
+    icon: <HouseIcon />,
+    title: "House Washing",
+    description:
+      "Professional house washing services to remove dirt and rejuvenate the exterior of your home.",
+    images: ["/assets/images/services/house_cleaning_1.jpg", "assets/images/services/house_cleaning_2.jpg", "assets/images/services/house_cleaning_3.jpg"],
   },
   {
     icon: <ConcreteCleaningIcon />,
@@ -45,42 +50,53 @@ class ServiceThree extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isModalOpen: false,
+      isLightboxOpen: false,
       selectedService: null,
-      selectedIndex: 0,
     };
   }
 
-  openModal = (service) => {
+  openLightbox = (service) => {
+    console.log("Opening lightbox for service:", service.title); // Check which service is clicked
     this.setState({
-      isModalOpen: true,
+      isLightboxOpen: true,
       selectedService: service,
-      modalSize: service.images.length + (service.video ? 1 : 0)
     });
   };
 
-
-  closeModal = () => {
+  closeLightbox = () => {
     this.setState({
-      isModalOpen: false,
+      isLightboxOpen: false,
       selectedService: null,
-      selectedIndex: 0 // Reset selectedIndex to 0
     });
   };
 
-  selectMedia = (index) => {
-    this.setState({ selectedIndex: index });
-  };
   render() {
-    const { isModalOpen, selectedService } = this.state;
+    const { isLightboxOpen, selectedService } = this.state;
     const ServiceContent = ServiceList.slice(0, this.props.item);
 
+    let slides = selectedService ? selectedService.images.map(src => ({ src })) : [];
+    if (selectedService) {
+      // Convert images to slide objects
+      slides = selectedService.images.map(src => ({ src, type: "image" }));
+
+      // Add video slide if it exists
+      if (selectedService.video) {
+        slides.push({
+          type: "video",
+          sources: [{ src: selectedService.video, type: "video/mp4" }], // Define video type here
+          muted: true, // Ensuring the video is muted by default
+          // Include additional video attributes if needed
+          // poster: "URL_TO_POSTER_IMAGE", // Optional: if you have a poster image
+          // width and height can be specified if known
+        });
+      }
+    }
     return (
       <React.Fragment>
         <div className="row">
           {ServiceContent.map((val, i) => (
             <div className="col-lg-6 col-md-6 col-sm-12" key={i}>
-              <div className="service service__style--2" onClick={() => this.openModal(val)}>
+              <div className="service service__style--2" onClick={() => this.openLightbox(val)}>
                 <div className="icon">{val.icon}</div>
                 <div className="content">
                   <h3 className="title">{val.title}</h3>
@@ -90,14 +106,21 @@ class ServiceThree extends Component {
             </div>
           ))}
         </div>
-        <Modal
-          isOpen={isModalOpen}
-          onClose={this.closeModal}
-          service={selectedService}
-          size={this.state.modalSize} // Pass the size or class name based on the content
-          selectedIndex={this.state.selectedIndex}
-          selectMedia={this.selectMedia}
-        />
+        {/* Lightbox Component - Make sure it's conditionally rendered */}
+        {isLightboxOpen && (
+          <Lightbox
+            open={isLightboxOpen}
+            close={this.closeLightbox}
+            slides={slides}
+            plugins={[Video, Thumbnails]} 
+            thumbnails={{
+              position: "bottom", // can be "top", "bottom", "start", or "end"
+              width: 120,
+              height: 80,
+              // other configurations...
+            }}
+          />
+        )}
       </React.Fragment>
     );
   }
