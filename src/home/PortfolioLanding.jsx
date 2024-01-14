@@ -24,7 +24,8 @@ const PortfolioLanding = () => {
     description =
       `As a family-owned and operated business, we established our company with immense passion, relentless hard work, unyielding dedication, and meticulous attention to detail. 
       We approach every project, whether commercial or residential, with the same level of care and attention we would give our own home, ensuring top-quality service at fair and competitive prices. Our commitment is to offer the finest commercial hood cleaning services, aiming to surpass our clients' expectations consistently. 
-      We are dedicated to maintaining a clean and healthy kitchen environment for our clients' staff and visitors alike. We understand how busy life can be, and we aim to relieve you of any concerns related to your exhaust system.`;
+      Based in Florida, we are proud to serve the Deltona area and its surroundings, including Orlando and Cocoa Beach. We understand how busy life can be, especially in these bustling regions, and we aim to relieve you of any concerns related to your exhaust system. 
+      We are dedicated to maintaining a clean and healthy kitchen environment for our clients' staff and visitors alike, ensuring peace of mind across Central Florida's vibrant communities.`;
     const descriptionWithBreaks = description.split('\n').map((text, index) => (
       <React.Fragment key={index}>
         {text}
