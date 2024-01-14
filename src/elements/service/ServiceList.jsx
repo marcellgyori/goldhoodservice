@@ -37,7 +37,7 @@ const ServiceList = [
 
   },
   {
-    icon: <FanIcon Users />,
+    icon: <FanIcon />,
     title: "Complete Exhaust System Cleaning",
     description:
       "Thorough cleaning services for your entire exhaust system, ensuring optimal performance and longevity by removing buildup and contaminants.",
