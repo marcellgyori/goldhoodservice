@@ -4,7 +4,6 @@ import { FiChevronUp } from "react-icons/fi";
 import HeaderThree from "../component/header/HeaderThree";
 import ContactOne from "../elements/contact/ContactOne";
 import ServiceList from "../elements/service/ServiceList";
-import PageHelmet from "../component/common/Helmet";
 
 
 
@@ -36,7 +35,7 @@ const PortfolioLanding = () => {
     return (
     <div>
       {/* <Helmet pageTitle="GoldHood Service" /> */}
-      <PageHelmet pageTitle='GoldHood Service' />
+      {/* <PageHelmet pageTitle='GoldHood Service' /> */}
       <HeaderThree homeLink="/" logo="symbol-dark" color="color-black" />
       {/* Start Slider Area   */}
       <div id="home" className="fix">
