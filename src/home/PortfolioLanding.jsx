@@ -26,13 +26,13 @@ const PortfolioLanding = () => {
       We approach every project, whether commercial or residential, with the same level of care and attention we would give our own home, ensuring top-quality service at fair and competitive prices. Our commitment is to offer the finest commercial hood cleaning services, aiming to surpass our clients' expectations consistently. 
       Based in Florida, we are proud to serve the Deltona area and its surroundings, including Orlando and Cocoa Beach. We understand how busy life can be, especially in these bustling regions, and we aim to relieve you of any concerns related to your exhaust system. 
       We are dedicated to maintaining a clean and healthy kitchen environment for our clients' staff and visitors alike, ensuring peace of mind across Central Florida's vibrant communities.`;
-    const descriptionWithBreaks = description.split('\n').map((text, index) => (
-      <React.Fragment key={index}>
-        {text}
-        <br />
-      </React.Fragment>
-    ));
-    return (
+  const descriptionWithBreaks = description.split('\n').map((text, index) => (
+    <React.Fragment key={index}>
+      {text}
+      <br />
+    </React.Fragment>
+  ));
+  return (
     <div>
       {/* <Helmet pageTitle="GoldHood Service" /> */}
       {/* <PageHelmet pageTitle='GoldHood Service' /> */}
@@ -121,9 +121,30 @@ const PortfolioLanding = () => {
 
       {/* End About Area */}
 
+      {/* Start New Section with Image */}
+      <div id="new-section" className="fix">
+        <div className="new-section-area ptb--120 bg_color--3">
+
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="new-section-wrapper text-center">
+                  <img
+                    src="/assets/images/services/About_us.jpg"
+                    alt="New Section Image"
+                    style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px' }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* End New Section with Image */}
+
       {/* Start Service Area  */}
       <div id="service" className="fix">
-        <div className="service-area creative-service-wrapper ptb--120 bg_color--5">
+        <div className="service-area creative-service-wrapper ptb--120 bg_color--1">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
@@ -148,7 +169,7 @@ const PortfolioLanding = () => {
 
       {/* Start COntact Area */}
       <div id="contact" className="fix">
-        <div className="rn-contact-area ptb--120 bg_color--1">
+        <div className="rn-contact-area ptb--120 bg_color--3">
           <ContactOne />
         </div>
       </div>

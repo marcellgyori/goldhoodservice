@@ -31,7 +31,7 @@ const ServiceList = [
     title: "Concrete Cleaning",
     description:
       "Efficient concrete cleaning for everything from sidewalks to driveways, restoring the original look of your concrete surfaces.",
-    images: ["assets/images/services/concrete_cleaning.jpg"],
+    images: ["assets/images/services/concrete_cleaning.jpg","assets/images/services/concrete_cleaning_2.jpg","assets/images/services/concrete_cleaning_3.jpg","assets/images/services/concrete_cleaning_4.jpg"],
     video: "assets/images/services/concrete_cleaning.mp4",
     videoThumbnail: "assets/images/services/concrete_cleaning_thumbnail.png"
 
