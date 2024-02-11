@@ -31,7 +31,7 @@ const ServiceList = [
     title: "Concrete Cleaning",
     description:
       "Efficient concrete cleaning for everything from sidewalks to driveways, restoring the original look of your concrete surfaces.",
-    images: ["assets/images/services/concrete_cleaning.jpg","assets/images/services/concrete_cleaning_2.jpg","assets/images/services/concrete_cleaning_3.jpg","assets/images/services/concrete_cleaning_4.jpg"],
+    images: ["assets/images/services/concrete_cleaning.jpg", "assets/images/services/concrete_cleaning_2.jpg", "assets/images/services/concrete_cleaning_3.jpg", "assets/images/services/concrete_cleaning_4.jpg", "assets/images/services/concrete_cleaning_5.jpg", "assets/images/services/concrete_cleaning_6.jpg", "assets/images/services/concrete_cleaning_7.jpg", "assets/images/services/concrete_cleaning_8.jpg", "assets/images/services/concrete_cleaning_9.jpg", "assets/images/services/concrete_cleaning_10.jpg", "assets/images/services/concrete_cleaning_11.jpg", "assets/images/services/concrete_cleaning_12.jpg", "assets/images/services/concrete_cleaning_13.jpg", "assets/images/services/concrete_cleaning_14.jpg", "assets/images/services/concrete_cleaning_15.jpg", "assets/images/services/concrete_cleaning_16.jpg"],
     video: "assets/images/services/concrete_cleaning.mp4",
     videoThumbnail: "assets/images/services/concrete_cleaning_thumbnail.png"
 
@@ -112,7 +112,7 @@ class ServiceThree extends Component {
             open={isLightboxOpen}
             close={this.closeLightbox}
             slides={slides}
-            plugins={[Video, Thumbnails]} 
+            plugins={[Video, Thumbnails]}
             thumbnails={{
               position: "bottom", // can be "top", "bottom", "start", or "end"
               width: 120,
